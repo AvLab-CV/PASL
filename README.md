@@ -13,10 +13,10 @@ https://github.com/xxxxxx321/PASL/assets/151173571/88824fb8-fcaa-4035-a510-6e5cb
 
 # Getting Started
 - Clone the repo:
-    ```
-    git clone https://github.com/AvLab-CV/PASL.git
-    cd PASL
-    ```
+```
+git clone https://github.com/AvLab-CV/PASL.git
+cd PASL
+```
 # Installation
 - Python 3.7
 - Pytorch 1.12.1
@@ -42,9 +42,9 @@ We offer the Voxceleb2 LP Dataset for download.
 |[Albedo model](https://drive.google.com/file/d/1VlSlEXAhseguor_T13Vy9oGpTgSakXZ8/view?usp=sharing)|Unzip it and place it into the data directory|
 # Inference
 ```
-    python demo_cam.py
-    python demo_video.py
-    python demo_ui.py
+python demo_cam.py
+python demo_video.py
+python demo_ui.py
 ```
 You can use `demo_cam.py` for a camera demo, or `demo_video.py` for a video demo. Additionally, we also offer a UI method using `demo_ui.py`.
 
@@ -68,7 +68,7 @@ Please place the models for different datasets in the `./experiment` directory.
 Next, use `main_lm_perceptual.py` to generate reenactment test samples. The generated images will be placed in the `./expr/eval` directory.
 
 ```
-    python main_lm_perceptual.py --dataset mpie 
+python main_lm_perceptual.py --dataset mpie 
 ```
 For the `--dataset` parameter, please replace it as needed.
 
@@ -81,7 +81,7 @@ After generating the test samples, you can use `mean_poe_csim.py` and `mean_arcf
 |[ArcFace](https://drive.google.com/file/d/10RPCyfVHWuCOLb7RPN3YAJ0KnYITDCgZ/view?usp=sharing)|Unzip it and place it into the main directory|
 
 ```
-    python mean_poe_csim.py
-    python mean_arcface_csim.py
+python mean_poe_csim.py
+python mean_arcface_csim.py
 ```
     
