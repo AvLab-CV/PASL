@@ -25,6 +25,11 @@ https://github.com/xxxxxx321/PASL/assets/151173571/88824fb8-fcaa-4035-a510-6e5cb
     conda env create -f environment.yml
     ```
 3. Please refer to [Pytorch3d](https://github.com/facebookresearch/pytorch3d/blob/main/INSTALL.md) to install pytorch3d.
+
+## Voxceleb2 LP Dataset
+We offer the Voxceleb2 LP Dataset for download.
+[GDrive](https://drive.google.com/drive/folders/1kHeXm9hOPCsF1Jyh9hVTqvPagYvvf-w8?usp=sharing)
+
 ## Pretrained Model
 |Path|Description|
 |---|---|
@@ -36,7 +41,38 @@ https://github.com/xxxxxx321/PASL/assets/151173571/88824fb8-fcaa-4035-a510-6e5cb
 |---|---|
 |[Albedo model](https://drive.google.com/file/d/1VlSlEXAhseguor_T13Vy9oGpTgSakXZ8/view?usp=sharing)|Unzip it and place it into the data directory|
 ## Inference
-- Run the demo.py
-    ```
-    python demo.py
-    ```
+```
+    python demo_cam.py
+    python demo_video.py
+    python demo_ui.py
+```
+You can use `demo_cam.py` for a camera demo, or `demo_video.py` for a video demo. Additionally, we also offer a UI method using `demo_ui.py`.
+
+## Validation
+We provide six types of test lists: MPIE-LP, Voxceleb1, and Voxceleb2, including self-reenactment and cross-reenactment. Please note that after downloading, you need to change the paths of the pairs.
+
+[Test list Sets](https://drive.google.com/file/d/10cNTvXIHllW1_rIgQovHE26_ASfKtLX7/view?usp=sharing)
+
+The pretrained models for MPIE-LP, Voxceleb1, and Voxceleb2-LP can be downloaded from the following links.
+|Pretrained Models|
+|---|
+|[MPIE-LP](https://drive.google.com/file/d/10cNTvXIHllW1_rIgQovHE26_ASfKtLX7/view?usp=sharing)|
+|[Voxceleb1](https://drive.google.com/file/d/1GCDhgMatmHH1LITpVgB_RTfpjAF13MXu/view?usp=sharing)|
+|[Voxceleb2-LP](https://drive.google.com/file/d/1GCDhgMatmHH1LITpVgB_RTfpjAF13MXu/view?usp=sharing)|
+
+Please place the models for different datasets in the `./experiment` directory.
+
+Next, use `main_lm_perceptual.py` to generate reenactment samples. The generated images will be placed in the `./expr/eval` directory.
+
+```
+    python main_lm_perceptual.py --dataset mpie 
+```
+For the `--dataset` parameter, please replace it as needed.
+
+After generating the test samples, you can use `mean_poe_csim.py` and `mean_arcface_csim.py` to test CSIM. Please download the POE pretrained model and the ArcFace pretrained model from the following links, and extract them directly to start testing.
+
+```
+    python mean_poe_csim.py
+    python mean_arcface_csim.py
+```
+    
