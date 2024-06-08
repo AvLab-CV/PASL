@@ -11,13 +11,13 @@ https://github.com/xxxxxx321/PASL/assets/151173571/88824fb8-fcaa-4035-a510-6e5cb
 
 
 
-## Getting Started
+# Getting Started
 - Clone the repo:
     ```
-    git clone https://github.com/xxxxxx321/PASL
+    git clone https://github.com/AvLab-CV/PASL.git
     cd PASL
     ```
-## Installation
+# Installation
 - Python 3.7
 - Pytorch 1.12.1
 2. Install the requirements
@@ -26,21 +26,21 @@ https://github.com/xxxxxx321/PASL/assets/151173571/88824fb8-fcaa-4035-a510-6e5cb
     ```
 3. Please refer to [Pytorch3d](https://github.com/facebookresearch/pytorch3d/blob/main/INSTALL.md) to install pytorch3d.
 
-## Voxceleb2 LP Dataset
+# Voxceleb2 LP Dataset
 We offer the Voxceleb2 LP Dataset for download.
 [GDrive](https://drive.google.com/drive/folders/1kHeXm9hOPCsF1Jyh9hVTqvPagYvvf-w8?usp=sharing)
 
-## Pretrained Model
+# Demo Pretrained Model
 |Path|Description|
 |---|---|
 |[CSG Model](https://drive.google.com/file/d/10cNTvXIHllW1_rIgQovHE26_ASfKtLX7/view?usp=sharing)|Unzip it and place it into the data directory|
 |[AEG Model](https://drive.google.com/file/d/1GCDhgMatmHH1LITpVgB_RTfpjAF13MXu/view?usp=sharing)|Unzip it and place it into the main directory|
 
-## Auxiliary Models
+# Auxiliary Models
 |Path|Description|
 |---|---|
 |[Albedo model](https://drive.google.com/file/d/1VlSlEXAhseguor_T13Vy9oGpTgSakXZ8/view?usp=sharing)|Unzip it and place it into the data directory|
-## Inference
+# Inference
 ```
     python demo_cam.py
     python demo_video.py
@@ -48,11 +48,13 @@ We offer the Voxceleb2 LP Dataset for download.
 ```
 You can use `demo_cam.py` for a camera demo, or `demo_video.py` for a video demo. Additionally, we also offer a UI method using `demo_ui.py`.
 
-## Validation
-We provide six types of test lists: MPIE-LP, Voxceleb1, and Voxceleb2, including self-reenactment and cross-reenactment. Please note that after downloading, you need to change the paths of the pairs.
+# Validation
+## Test list Sets
+We provide six types of test lists: MPIE-LP, Voxceleb1, and Voxceleb2-LP, including self-reenactment and cross-reenactment. Please note that after downloading, you need to change the paths of the pairs.
 
 [Test list Sets](https://drive.google.com/file/d/10cNTvXIHllW1_rIgQovHE26_ASfKtLX7/view?usp=sharing)
 
+## Validation Pretrained Models
 The pretrained models for MPIE-LP, Voxceleb1, and Voxceleb2-LP can be downloaded from the following links.
 |Pretrained Models|
 |---|
@@ -62,14 +64,21 @@ The pretrained models for MPIE-LP, Voxceleb1, and Voxceleb2-LP can be downloaded
 
 Please place the models for different datasets in the `./experiment` directory.
 
-Next, use `main_lm_perceptual.py` to generate reenactment samples. The generated images will be placed in the `./expr/eval` directory.
+## Generate the test samples
+Next, use `main_lm_perceptual.py` to generate reenactment test samples. The generated images will be placed in the `./expr/eval` directory.
 
 ```
     python main_lm_perceptual.py --dataset mpie 
 ```
 For the `--dataset` parameter, please replace it as needed.
 
+## Use POE and ArcFace to test CSIM.
 After generating the test samples, you can use `mean_poe_csim.py` and `mean_arcface_csim.py` to test CSIM. Please download the POE pretrained model and the ArcFace pretrained model from the following links, and extract them directly to start testing.
+
+|Backbone|
+|---|
+|[POE](https://drive.google.com/file/d/10cNTvXIHllW1_rIgQovHE26_ASfKtLX7/view?usp=sharing)|Unzip it and place it into the data directory|
+|[ArcFace](https://drive.google.com/file/d/1GCDhgMatmHH1LITpVgB_RTfpjAF13MXu/view?usp=sharing)|Unzip it and place it into the main directory|
 
 ```
     python mean_poe_csim.py
