@@ -31,15 +31,17 @@ We offer the Voxceleb2 LP Dataset for download.
 [GDrive](https://drive.google.com/drive/folders/1kHeXm9hOPCsF1Jyh9hVTqvPagYvvf-w8?usp=sharing)
 
 # Demo Pretrained Model
-|Path|Description|
-|---|---|
-|[CSG Model](https://drive.google.com/file/d/10cNTvXIHllW1_rIgQovHE26_ASfKtLX7/view?usp=sharing)|Unzip it and place it into the data directory|
-|[AEG Model](https://drive.google.com/file/d/1GCDhgMatmHH1LITpVgB_RTfpjAF13MXu/view?usp=sharing)|Unzip it and place it into the main directory|
+|Demo Pretrained Model|
+|---|
+|[GDrive](https://drive.google.com/drive/folders/1yHrOIKB0cttrDxHeAN5Yh8KOjGy3CNHy?usp=sharing)|
+
+Please place the checkpoint files in the `./experiment/demo` directory.
 
 # Auxiliary Models
 |Path|Description|
 |---|---|
-|[Albedo model](https://drive.google.com/file/d/1VlSlEXAhseguor_T13Vy9oGpTgSakXZ8/view?usp=sharing)|Unzip it and place it into the data directory|
+|[DECA model](https://drive.google.com/file/d/1oMwg5xzkgPkYiZT_ZUCwk7CdttEbubkD/view?usp=sharing)|Please unzip and place them in the main directory.|
+
 # Inference
 ```
 python demo_cam.py
@@ -52,15 +54,15 @@ You can use `demo_cam.py` for a camera demo, or `demo_video.py` for a video demo
 ## Test list Sets
 We provide six types of test lists: MPIE-LP, Voxceleb1, and Voxceleb2-LP, including self-reenactment and cross-reenactment. Please note that after downloading, you need to change the paths of the pairs.
 
-[Test list Sets](https://drive.google.com/file/d/10cNTvXIHllW1_rIgQovHE26_ASfKtLX7/view?usp=sharing)
+[Test list Sets](https://drive.google.com/drive/folders/13yte5HkvXfZvToAN0jebS304Lj009rzo?usp=sharing)
 
 ## Validation Pretrained Models
 The pretrained models for MPIE-LP, Voxceleb1, and Voxceleb2-LP can be downloaded from the following links.
 |Pretrained Models|
 |---|
 |[MPIE-LP](https://drive.google.com/drive/folders/1LtU6YMu6OK2MI4d7s7pFiMJsEc7r_FN1?usp=sharing)|
-|[Voxceleb1](https://drive.google.com/file/d/1GCDhgMatmHH1LITpVgB_RTfpjAF13MXu/view?usp=sharing)|
-|[Voxceleb2-LP](https://drive.google.com/file/d/1GCDhgMatmHH1LITpVgB_RTfpjAF13MXu/view?usp=sharing)|
+|[Voxceleb1](https://drive.google.com/drive/folders/1QPcTccAXWvdpZGfm5knLZm_GkyBD9tZw?usp=sharing)|
+|[Voxceleb2-LP](https://drive.google.com/drive/folders/1QPcTccAXWvdpZGfm5knLZm_GkyBD9tZw?usp=sharing)|
 
 Please place the models for different datasets in the `./experiment` directory.
 
