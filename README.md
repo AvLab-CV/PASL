@@ -65,12 +65,13 @@ The pretrained models for MPIE-LP, Voxceleb1, and Voxceleb2-LP can be downloaded
 Please place the models for different datasets in the `./experiment` directory.
 
 ## Generate the test samples
-Next, use `main_lm_perceptual.py` to generate reenactment test samples. The generated images will be placed in the `./expr/eval` directory.
+Next, You can use `test_sample_mpie.py`, `test_sample_vox1.py`, and `test_sample_vox2.py` to generate test samples for each respective dataset. The generated images will be placed in the `./expr/eval` directory.
 
 ```
-python main_lm_perceptual.py --dataset mpie 
+python test_sample_mpie.py
+python test_sample_vox1.py
+python test_sample_vox2.py
 ```
-For the `--dataset` parameter, please replace it as needed.
 
 ## Use POE and ArcFace to test CSIM.
 After generating the test samples, you can use `mean_poe_csim.py` and `mean_arcface_csim.py` to test CSIM. Please download the POE pretrained model and the ArcFace pretrained model from the following links, and extract them directly to start testing.
