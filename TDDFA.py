@@ -36,7 +36,6 @@ class TDDFA(object):
             shape_dim=kvs.get('shape_dim', 40),
             exp_dim=kvs.get('exp_dim', 10)
         )
-        #print(len(self.bfm))
         self.tri = self.bfm.tri
 
         # config
@@ -142,3 +141,25 @@ class TDDFA(object):
             ver_lst.append(pts3d)
 
         return ver_lst
+    
+    def substitute_vers(self, sor_para, sor_roi, ref_para, ref_roi, **kvs):
+        dense_flag = kvs.get('dense_flag', False)
+        size = self.size
+
+        ver_lst = []
+        
+        for sor_param, sor_roi_box, ref_param, ref_roi_box in zip(sor_para, sor_roi, ref_para, ref_roi):
+            if dense_flag:
+                sor_R, sor_offset, sor_alpha_shp, sor_alpha_exp = _parse_param(sor_param)
+                ref_R, ref_offset, ref_alpha_shp, ref_alpha_exp = _parse_param(ref_param)
+                pts3d = R @ (self.bfm.u + self.bfm.w_shp @ alpha_shp + self.bfm.w_exp @ alpha_exp). \
+                    reshape(3, -1, order='F') + offset
+                pts3d = similar_transform(pts3d, roi_box, size)
+            else:
+                R, offset, alpha_shp, alpha_exp = _parse_param(param)
+                pts3d = R @ (self.bfm.u_base + self.bfm.w_shp_base @ alpha_shp + self.bfm.w_exp_base @ alpha_exp). \
+                    reshape(3, -1, order='F') + offset
+                pts3d = similar_transform(pts3d, roi_box, size)
+
+            ver_lst.append(pts3d)
+

@@ -9,7 +9,7 @@ import onnxruntime
 
 from utils.onnx import convert_to_onnx
 from utils.io import _load
-from utils.functions import (
+from utils.functions_poe import (
     crop_img, parse_roi_box_from_bbox, parse_roi_box_from_landmark,
 )
 from utils.tddfa_util import _parse_param, similar_transform
