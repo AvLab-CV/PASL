@@ -57,7 +57,6 @@ You can use `demo_cam.py` for a camera demo, or `demo_video.py` for a video demo
 # Validation
 ## Download the Test Lists.
 Please download the test lists for each dataset. Note that you will need to change the paths accordingly.
-[Test list Sets](https://drive.google.com/drive/folders/13yte5HkvXfZvToAN0jebS304Lj009rzo?usp=sharing)
 
 ## Validation Pretrained Models
 The pretrained models for MPIE-LP, Voxceleb1, and Voxceleb2-LP can be downloaded from the following links.
