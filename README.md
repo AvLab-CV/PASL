@@ -30,6 +30,10 @@ cd PASL
 We offer the Voxceleb2 LP Dataset for download.
 [GDrive](https://drive.google.com/drive/folders/1kHeXm9hOPCsF1Jyh9hVTqvPagYvvf-w8?usp=sharing)
 
+# Training and Testing Lists 
+We provide the training and testing lists for MPIE-LP and Voxceleb2, as well as the testing list for Voxceleb1.
+[GDrive](https://drive.google.com/drive/folders/13yte5HkvXfZvToAN0jebS304Lj009rzo?usp=sharing)
+
 # Demo Pretrained Model
 |Demo Pretrained Model|
 |---|
@@ -51,9 +55,8 @@ python demo_ui.py
 You can use `demo_cam.py` for a camera demo, or `demo_video.py` for a video demo. Additionally, we also offer a UI method using `demo_ui.py`.
 
 # Validation
-## Training List and Testing List.
-We provide six types of test lists: MPIE-LP, Voxceleb1, and Voxceleb2-LP, including self-reenactment and cross-reenactment. Please note that after downloading, you need to change the paths of the pairs.
-
+## Download the Test Lists.
+Please download the test lists for each dataset. Note that you will need to change the paths accordingly.
 [Test list Sets](https://drive.google.com/drive/folders/13yte5HkvXfZvToAN0jebS304Lj009rzo?usp=sharing)
 
 ## Validation Pretrained Models
@@ -75,12 +78,12 @@ python test_sample_vox1.py
 python test_sample_vox2.py
 ```
 
-## Use POE and ArcFace to Test CSIM.
-After generating the test samples, you can use `mean_poe_csim.py` and `mean_arcface_csim.py` to test CSIM. Please download the POE pretrained model and the ArcFace pretrained model from the following links, and extract them directly to start testing.
+## Use PAE and ArcFace to Test CSIM
+After generating the test samples, you can use `mean_poe_csim.py` and `mean_arcface_csim.py` to test CSIM. Please download the PAE pretrained model and the ArcFace pretrained model from the following links, and extract them directly to start testing.
 
 |Backbone|
 |---|
-|[POE](https://drive.google.com/file/d/1zU1YTRstgrdJ7hwjl9CVjgFnNAyNFLZS/view?usp=sharing)|Unzip it and place it into the data directory|
+|[PAE](https://drive.google.com/file/d/1zU1YTRstgrdJ7hwjl9CVjgFnNAyNFLZS/view?usp=sharing)|Unzip it and place it into the data directory|
 |[ArcFace](https://drive.google.com/file/d/10RPCyfVHWuCOLb7RPN3YAJ0KnYITDCgZ/view?usp=sharing)|Unzip it and place it into the main directory|
 
 ```
