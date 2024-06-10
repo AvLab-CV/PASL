@@ -51,7 +51,7 @@ python demo_ui.py
 You can use `demo_cam.py` for a camera demo, or `demo_video.py` for a video demo. Additionally, we also offer a UI method using `demo_ui.py`.
 
 # Validation
-## Test list Sets
+## Training List and Testing List.
 We provide six types of test lists: MPIE-LP, Voxceleb1, and Voxceleb2-LP, including self-reenactment and cross-reenactment. Please note that after downloading, you need to change the paths of the pairs.
 
 [Test list Sets](https://drive.google.com/drive/folders/13yte5HkvXfZvToAN0jebS304Lj009rzo?usp=sharing)
@@ -66,7 +66,7 @@ The pretrained models for MPIE-LP, Voxceleb1, and Voxceleb2-LP can be downloaded
 
 Please place the models for different datasets in the `./experiment` directory.
 
-## Generate the test samples
+## Generate the Test Samples
 Next, You can use `test_sample_mpie.py`, `test_sample_vox1.py`, and `test_sample_vox2.py` to generate test samples for each respective dataset. The generated images will be placed in the `./expr/eval` directory.
 
 ```
@@ -75,7 +75,7 @@ python test_sample_vox1.py
 python test_sample_vox2.py
 ```
 
-## Use POE and ArcFace to test CSIM.
+## Use POE and ArcFace to Test CSIM.
 After generating the test samples, you can use `mean_poe_csim.py` and `mean_arcface_csim.py` to test CSIM. Please download the POE pretrained model and the ArcFace pretrained model from the following links, and extract them directly to start testing.
 
 |Backbone|
