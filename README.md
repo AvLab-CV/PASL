@@ -64,7 +64,7 @@ The pretrained models for MPIE-LP, Voxceleb1, and Voxceleb2-LP can be downloaded
 |---|
 |[MPIE-LP](https://drive.google.com/drive/folders/1LtU6YMu6OK2MI4d7s7pFiMJsEc7r_FN1?usp=sharing)|
 |[Voxceleb1](https://drive.google.com/drive/folders/1QPcTccAXWvdpZGfm5knLZm_GkyBD9tZw?usp=sharing)|
-|[Voxceleb2-LP](https://drive.google.com/drive/folders/1QPcTccAXWvdpZGfm5knLZm_GkyBD9tZw?usp=sharing)|
+|[Voxceleb2-LP]()|
 
 Please place the models for different datasets in the `./experiment` directory.
 
@@ -86,7 +86,7 @@ After generating the test samples, you can use `mean_poe_csim.py` and `mean_arcf
 |[ArcFace](https://drive.google.com/file/d/10RPCyfVHWuCOLb7RPN3YAJ0KnYITDCgZ/view?usp=sharing)|Unzip it and place it into the main directory|
 
 ```
-python mean_poe_csim.py
+python mean_pae_csim.py
 python mean_arcface_csim.py
 ```
     
