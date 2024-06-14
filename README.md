@@ -64,7 +64,7 @@ The pretrained models for MPIE-LP, Voxceleb1, and Voxceleb2-LP can be downloaded
 |---|
 |[MPIE-LP](https://drive.google.com/drive/folders/1LtU6YMu6OK2MI4d7s7pFiMJsEc7r_FN1?usp=sharing)|
 |[Voxceleb1](https://drive.google.com/drive/folders/1QPcTccAXWvdpZGfm5knLZm_GkyBD9tZw?usp=sharing)|
-|[Voxceleb2-LP]()|
+|[Voxceleb2-LP](https://drive.google.com/drive/folders/19Ig7NMdU9tbWEea3fzV_USu71nvUROPA?usp=sharing)|
 
 Please place the models for different datasets in the `./experiment` directory.
 
@@ -78,7 +78,7 @@ python test_sample_vox2.py
 ```
 
 ## Use PAE and ArcFace to Test CSIM
-After generating the test samples, you can use `mean_poe_csim.py` and `mean_arcface_csim.py` to test CSIM. Please download the PAE pretrained model and the ArcFace pretrained model from the following links, and extract them directly to start testing.
+After generating the test samples, you can use `mean_pae_csim.py` and `mean_arcface_csim.py` to test CSIM. Please download the PAE pretrained model and the ArcFace pretrained model from the following links, and extract them directly to start testing.
 
 |Backbone|
 |---|
